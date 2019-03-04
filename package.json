@@ -4,6 +4,10 @@
   "main": "index.js",
   "repository": "https://github.com/bluelogix/auth-i.git",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "express": "^4.16.4",
