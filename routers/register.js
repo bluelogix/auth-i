@@ -6,7 +6,7 @@ const db = require('./config.js');
 const Users = require('./users-model.js');
 
 
-
+//REGISTER USER
 
 router.post('/', (req, res) => {
     let user = req.body;

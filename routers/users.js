@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 const db = require('./config.js');
 const Users = require('./users-model.js');
 
-
+//USERS WHEN LOG IN IS SUCCESSFUL 
 function restricted(req, res, next) {
     const {username, password } = req.headers
     if (username && password ) {
@@ -15,7 +15,7 @@ function restricted(req, res, next) {
         if(user && bcrypt.compareSync(password, user.password )) {
           next();
         } else {
-          res.status(401).json({ message: 'Invalid Credentials' })
+          res.status(401).json({ message: 'You shall not pass!' })
         }
       }).catch(err => {
         res.status(500).json(err)
