@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const registerRouter = require('./routers/register.js');
 const loginRouter = require('./routers/login.js');
+const usersRouter = require('./routers/users.js');
 
 const server = express();
 
@@ -13,6 +14,7 @@ server.use(cors());
 
 server.use('/api/register', registerRouter);
 server.use('/api/login', loginRouter);
+server.use('/api/users', usersRouter);
 
 server.get('/', (req, res) => {
     res.send("Auth Auth Auth!");
